@@ -9,6 +9,7 @@ FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=build /app/gateway-service/target/gateway-service-1.0.0-SNAPSHOT.jar /app/app.jar
 EXPOSE 80
+
 ENTRYPOINT ["sh", "-c"]
 
 ENV Environment env-dev
